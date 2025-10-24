@@ -1,0 +1,7 @@
+# Игнориране на временни и системни файлове
+.DS_Store
+thumbs.db
+node_modules/
+*.log
+dist/
+build/
