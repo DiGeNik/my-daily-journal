@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Моето дневно приложение</title>
+</head>
+<body>
+    <h1>Моето дневно приложение</h1>
+    <input type="text" id="entryInput" placeholder="Въведи нов запис...">
+    <button id="addEntry">Добави запис</button>
+    <ul id="entriesList"></ul>
+
+    <script>
+    const input = document.getElementById('entryInput');
+    const button = document.getElementById('addEntry');
+    const list = document.getElementById('entriesList');
+
+    button.addEventListener('click', () => {
+        const text = input.value.trim();
+        if (text !== "") {
+            const li = document.createElement('li');
+            li.textContent = text;
+            list.appendChild(li);
+            input.value = "";
+        }
+    });
+    </script>
+</body>
+</html>
